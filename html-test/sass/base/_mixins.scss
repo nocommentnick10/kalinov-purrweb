@@ -1,9 +1,0 @@
-@mixin pseudo($width, $height){
-    content: "";
-    position: absolute;
-    display: block;
-    width: $width;
-    height: $height;
-}
-
-// Кто понавтыкал в дизайне этих светящихся кружочков >:(((((((
