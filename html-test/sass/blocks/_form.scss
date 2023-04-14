@@ -1,0 +1,126 @@
+.form{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    
+    width: 818px;
+
+    @media (max-width: 875px) {
+        width: 550px;
+    }
+
+    @media (max-width: 650px) {
+        width: 80%;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+
+    &::after{
+        @include pseudo(337px, 342px);
+
+        bottom: 0;
+        right: -50%;
+
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+        opacity: 0.3;
+        filter: blur(125px);
+        transform: rotate(5.78deg);
+    }
+}
+
+.form__inputs{
+    margin-bottom: 40px;
+
+    & > .form__item:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+.form__item{
+    margin-bottom: 16px;
+
+    text-align: center;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+
+    input, textarea{
+        width: 100%;
+        padding: 18px 11px 17px;
+
+        background-color: #ffffff;
+        border: 1px solid #5C5C5C;
+        border-radius: 10px;
+
+        color: #000000;
+
+        &::placeholder{
+            color: #BFBFBF;
+        }
+    }
+
+    textarea{
+        height: 140px;
+    }
+
+    button{
+        position: relative;
+
+        width: 398px;
+
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        transition: all 0.2s ease-in;
+
+        line-height: 80px;
+        text-align: center;
+
+        &::after{
+            @include pseudo(100%, 100%);
+
+            top: 0;
+            left: -100%;
+
+            z-index: -9;
+
+            transition: left 0.2s ease-in;
+
+            background-color: #ffffff;
+        }
+
+        &:hover{
+            color: #000000 !important;
+            border-color: #000000;
+        }
+
+        &:hover::after{
+            left: 0;
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+    }
+}
+
+.form-cities{
+    display: flex;
+    column-gap: 24px;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        column-gap: unset;
+        row-gap: 16px;
+    }
+}
+
+.err{
+    border-color: #ff0000 !important;
+}
