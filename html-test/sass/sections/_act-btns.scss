@@ -1,0 +1,47 @@
+.act-btns {
+    margin-top: 179px;
+    margin-bottom: 236px;
+
+    @media (max-width: 500px) {
+        margin-top: 80px;
+        margin-bottom: 109px;
+    }
+}
+.act-btns__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 81px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+.act-btns__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 503px;
+    height: 312px;
+
+    padding: 62px 62px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+
+    @media (max-width: 650px) {
+        width: 345px;
+    }
+}
+.act-btns__text {
+    max-width: 375px;
+
+    margin-bottom: 30px;
+}
+.act-btns__link {
+    &:hover{
+        text-decoration: underline !important;
+    }
+}

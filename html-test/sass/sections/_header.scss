@@ -1,0 +1,49 @@
+.header {
+    margin-top: 23px;
+    margin-bottom: 18px;
+}
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 108px;
+
+    @media (max-width: 650px) {
+        column-gap: unset;
+        justify-content: space-between;
+    }
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.header__login {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    &:hover span::after{
+        width: 100%;
+    }
+
+    span{
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+
+            width: 0px;
+            height: 1px;
+
+            background-color: #ffffff;
+
+            transition: width 0.2s ease-in;
+        }
+    }
+}
